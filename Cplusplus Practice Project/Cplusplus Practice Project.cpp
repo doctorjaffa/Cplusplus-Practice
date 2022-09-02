@@ -7,6 +7,7 @@
 int main()
 {
 
+    /*
     //Examples of variable types.
     int testInt = 0;
     unsigned testUnsigned = 100u;
@@ -103,6 +104,88 @@ int main()
     //Written in-line with other code, such as an assignment statement.
     //Results in one of two values based on the condition.
     int ternResult = decision ? 1 : 2;
+
+    */
+
+    /* ---------------------------------------------------------------------------------- HOMEWORK TASKS ---------------------------------------------------------------------------------- */
+
+    //Task 1: Rectangle.
+
+    std::cout << "Please enter the length of the rectangle.\n";
+    int length = 0;
+
+    std::cin >> length;
+
+    std::cout << "Please enter the width of the rectangle.\n";
+    int width = 0;
+
+    std::cin >> width;
+
+    int perimiter = 2 * (length + width);
+    int area = length * width;
+
+    std::cout << "\nThe perimiter of the rectangle is: " << perimiter << "." << std::endl;
+    std::cout << "The area of the rectangle is: " << area << "." << std::endl;
+
+    //Task 2: Time Conversions.
+
+    std::cout << "\n Time Conversions" << std::endl;
+
+    std::cout << "\nPlease enter a number of hours.\n";
+    float hours = 0.0f;
+
+    std::cin >> hours;
+
+    float minutes = hours * 60;
+    float seconds = minutes * 60;
+
+    std::cout << "\nThe number of minutes in " << hours << " hours is: " << minutes << "." << std::endl;
+    std::cout << "\nThe number of seconds in " << hours << " hours is: " << seconds << "." << std::endl;
+
+    //Task 3: Insult Generator. 
+
+    std::cout << "\n Insult Generator" << std::endl;
+
+    std::string insult = "idiot";
+
+    std::string otherText = "You are an ";
+
+    std::cout << "\n" << otherText << insult << "!" << std::endl;
+
+    //Task 4: Code Word Locator.
+
+    std::cout << "\n Code Word Locator" << std::endl;
+
+    std::string codeWord = "word";
+    std::string longString = "eqpountwpouvsdfnpouwordqpounwfwpoufnnwfpwiue";
+
+    std::size_t codePos = longString.find(codeWord);
+
+    std::cout << "\nThe long text: " << longString << std::endl;
+    std::cout << "The code word: " << codeWord << std::endl;
+
+    std::cout << "\nThe position of the code word is: " << codePos << std::endl;
+
+    //Task 5: Date of Birth.
+
+    std::cout << "\n Date of Birth" << std::endl;
+
+    std::cout << "\nPlease enter the year you were born (XXXX):" << std::endl;
+
+    int yearBorn = 0;
+    std::cin >> yearBorn;
+
+    std::cout << "Please enter the month you were born (XX):" << std::endl;
+
+    int monthBorn = 0;
+    std::cin >> monthBorn;
+
+    std::cout << "Please enter the day you were born (XX):" << std::endl;
+
+    int dayBorn = 0;
+    std::cin >> dayBorn;
+
+    std::cout << "You were born on: " << dayBorn << "/" << monthBorn << "/" << yearBorn << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
