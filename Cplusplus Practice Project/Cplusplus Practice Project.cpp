@@ -4,10 +4,14 @@
 #include <iostream>
 #include <string>
 
+void BasicFunction() {
+    std::cout << "Basic function ran.\n";
+}
+
 int main()
 {
 
-    /*
+    /* ------------------------------------------------------------------------------------- WEEK 1 ------------------------------------------------------------------------------------- 
     //Examples of variable types.
     int testInt = 0;
     unsigned testUnsigned = 100u;
@@ -100,14 +104,137 @@ int main()
         std::cout << "Decision was false.\n";
     }
 
+    
+    //Switch statement. 
+    int errorCode = 2;
+
+    switch (errorCode)
+    {
+    case 0:
+    {
+        std::cout << "Error was 0.\n";
+        break;
+    }
+    case 1:
+    {
+        std::cout << "Error was 1.\n";
+        break;
+    }
+    case 2:
+    {
+        std::cout << "Error was 2.\n";
+        break;
+    }
+    default:
+    {
+        std::cout << "Error was unrecognised.\n";
+        break;
+    }
+    }
+
+    //EXAMPLE PROGRAM - Which Way?
+
+    std::cout << "Please enter which direction you wish to go:\n"
+        << "1. North\n"
+        << "2. East\n"
+        << "3. South\n"
+        << "4. West\n"
+        << "\n";
+
+    int direction = 0;
+
+    std::cin >> direction;
+
+    switch (direction)
+    {
+    case 1: 
+    {
+        std::cout << "You walk upon a grand river, it rids you of your stress and you feel some relief.";
+        break;
+    }
+    case 2:
+    {
+        std::cout << "You make your way through some deep woods, unsure of how far much distance you've travelled since you started.";
+        break;
+    }
+    case 3:
+    {
+        std::cout << "As you're making your way further into the woods, you come across a small opening where a family of rabbits are playing around. It is a wholesome scene you take in.";
+        break;
+    }
+    case 4:
+    {
+        std::cout << "You quickly come across some thick bushes that will take a lot of effort to get past.";
+        break;
+    }
+    default:
+    {
+        std::cout << "You sit on the ground where you are. Maybe you'll pick a direction later.";
+        break;
+    }
+    }
+
     //Advanced if statement: Ternary;
     //Written in-line with other code, such as an assignment statement.
     //Results in one of two values based on the condition.
-    int ternResult = decision ? 1 : 2;
+    //int ternResult = decision ? 1 : 2;
+
+    
+
+
+    //ITERATION.
+    //While loop - these are the same in C++ and C#.
+
+    bool whileB = true;
+
+    //To enter this loop, the condition must be true.
+    while (whileB == true)
+    {
+        //Execute code within the loop.
+        whileB = false;
+        //At the end, check the condition. If it is still true, continue the loop.
+    }
+   
+    //Do While loop - checks condition after the first loop.
+    int doI = 0;
+
+    do {
+        ++doI;
+        std::cout << "Do while ran " << doI << " times.";
+    } while (doI < 2);
+
+    //For loop.
+    for (int i = 0; i < 5; ++i)
+    {
+        //Do the body of the loop.
+        std::cout << "For loop ran " << i << " times.";
+    }
+
+
+    //EXAMPLE PROGRAM - Gooooooogle.
+
+    std::cout << "\nPlease enter the number of pages: ";
+
+    int pages = 0;
+    std::cin >> pages;
+
+    std::cout << "\nG";
+    for (int i = 0; i < pages; ++i)
+    {
+        std::cout << "o";
+    }
+    std::cout << "gle\n";
 
     */
 
-    /* ---------------------------------------------------------------------------------- HOMEWORK TASKS ---------------------------------------------------------------------------------- */
+
+    //Functions.
+
+    BasicFunction();
+
+    /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    /* ---------------------------------------------------------------------------------- HOMEWORK TASKS ---------------------------------------------------------------------------------- 
 
     //Task 1: Rectangle.
 
@@ -186,6 +313,8 @@ int main()
     std::cin >> dayBorn;
 
     std::cout << "You were born on: " << dayBorn << "/" << monthBorn << "/" << yearBorn << std::endl;
+
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
