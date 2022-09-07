@@ -8,6 +8,22 @@ void BasicFunction() {
     std::cout << "Basic function ran.\n";
 }
 
+//There exists a function called EarlyDeclare.
+//This is called a Forward Declaration.
+void EarlyDeclare();
+
+void ParamaterFunc(int paramInt)
+{
+    ++paramInt;
+
+    std::cout << "ParameterFunc ran - paramInt = " << paramInt << ".\n";
+}
+
+int ReturnFunc()
+{
+    return 42;
+}
+
 int main()
 {
 
@@ -225,12 +241,28 @@ int main()
     }
     std::cout << "gle\n";
 
-    */
 
 
     //Functions.
 
     BasicFunction();
+
+    EarlyDeclare();
+
+    //paramInt = testInt.
+    int testInt = 4;
+    ParamaterFunc(testInt);
+
+    int returnValue = ReturnFunc();
+    std::cout << "Return value: " << returnValue << ".\n";
+
+    */
+
+    //Static array.
+    int intArray[] = { 0, 1, 2 };
+
+    const int intArraySize = 3;
+    int intArrayB[intArraySize];
 
     /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -315,6 +347,12 @@ int main()
     std::cout << "You were born on: " << dayBorn << "/" << monthBorn << "/" << yearBorn << std::endl;
 
     -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+}
+
+//Implementation for EarlyDeclare that was declared at the top. Name must match exactly.
+void EarlyDeclare()
+{
+    std::cout << "Early Declare function ran.\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
