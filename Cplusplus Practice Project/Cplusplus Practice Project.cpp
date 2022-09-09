@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-
+/*
 void BasicFunction() {
     std::cout << "Basic function ran.\n";
 }
@@ -22,6 +22,22 @@ void ParamaterFunc(int paramInt)
 int ReturnFunc()
 {
     return 42;
+}
+
+*/
+int RectangleArea(int width, int height)
+{
+    int area = width * height;
+
+    return area;
+}
+
+int RandomiseScore(int maxScore)
+{
+
+    int iScore = rand() % maxScore + 1;
+
+    return iScore;
 }
 
 int main()
@@ -256,7 +272,7 @@ int main()
     int returnValue = ReturnFunc();
     std::cout << "Return value: " << returnValue << ".\n";
 
-    */
+    
 
     //Static array.
     int intArray[] = { 0, 1, 2 };
@@ -264,10 +280,12 @@ int main()
     const int intArraySize = 3;
     int intArrayB[intArraySize];
 
+    */
+
     /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-    /* ---------------------------------------------------------------------------------- HOMEWORK TASKS ---------------------------------------------------------------------------------- 
-
+    /* ---------------------------------------------------------------------------------- HOMEWORK TASKS ---------------------------------------------------------------------------------- */
+    /*
     //Task 1: Rectangle.
 
     std::cout << "Please enter the length of the rectangle.\n";
@@ -346,7 +364,83 @@ int main()
 
     std::cout << "You were born on: " << dayBorn << "/" << monthBorn << "/" << yearBorn << std::endl;
 
-    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+    */
+
+    //Task 6: Selection.
+    std::string badWord = "blueberry";
+
+    std::cout << "Please enter a word: ";
+    std::string userWord = "";
+
+    std::cin >> userWord;
+
+    if (userWord == badWord)
+    {
+        std::cout << "\nBLEEP\n";
+    }
+    else
+    {
+        std::cout << "\n" << userWord << std::endl;
+    }
+
+    //Task 7: Iteration.
+    std::cout << "\nPlease enter how many bottles are on the wall: ";
+    int bottles = 0;
+    std::cin >> bottles;
+
+    bool drinkBottle = true;
+    do {
+        std::cout << "\n" << bottles << " bottles of beer on the wall.\n";
+
+        if (bottles > 0)
+        {
+            std::cout << "\nWould you like to drink a bottle? Y/N: ";
+
+            std::string userAns = "";
+            std::cin >> userAns;
+
+            if (userAns == "N")
+            {
+                drinkBottle = false;
+            }
+            else {
+                --bottles;
+            }
+        }
+    } while (drinkBottle == true);
+
+    
+
+    //Task 8: Rectangle Area v2.
+
+    std::cout << "\nPlease enter the width of the rectangle: ";
+    int width = 0;
+    std::cin >> width;
+
+    std::cout << "\nPlease enter the height of the rectangle: ";
+    int height = 0;
+    std::cin >> height;
+
+    int area = RectangleArea(width, height);
+
+    std::cout << "\nThe area of the rectangle is: " << area << std::endl;
+
+    
+    //Task 9: Randomisation.
+    std::cout << "\nPlease enter a maximum score: ";
+    int maxScore = 0;
+    std::cin >> maxScore;
+
+    for (int i = 0; i < 5; ++i)
+    {
+        int score = RandomiseScore(maxScore);
+
+        std::cout << score << std::endl;
+    }
+
+    
+
+    /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 }
 
 //Implementation for EarlyDeclare that was declared at the top. Name must match exactly.
