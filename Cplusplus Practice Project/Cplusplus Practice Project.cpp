@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <stdlib.h> //To use rand().
+#include <time.h> //To seed rand().
+
 /*
 void BasicFunction() {
     std::cout << "Basic function ran.\n";
@@ -280,8 +284,67 @@ int main()
     const int intArraySize = 3;
     int intArrayB[intArraySize];
 
-    */
 
+    //Vectors.
+    std::vector<int> intVector;
+
+    //Add items to the vector using a function called push_back().
+    //This function adds the item to the end of the vector. 
+    intVector.push_back(1); //Vector = { 1 }.
+    intVector.push_back(2); //Vector = { 1, 2 }.
+    intVector.push_back(36); //Vector = { 1, 2, 36 }.
+    intVector.push_back(40); //Vector = { 1, 2, 36, 40 }.
+    intVector.push_back(111); //Vector = { 1, 2, 36, 40, 111 }.
+
+    //Get the current size of the vector using intVector.size()
+    std::cout << "The vector is " << intVector.size() << std::endl;
+
+    //Items can be accessed in a vector just like an array.
+    std::cout << "Vector index 1 is: " << intVector[1] << std::endl;
+
+    //Change the value of an item in the vector. 
+    //The element MUST already exist to be able to change it.
+    intVector[1] = 5;
+    std::cout << "Vector index 1 is: " << intVector[1] << std::endl;
+
+    //Items can be removed using the erase() function. Erase uses iterators. 
+    //Iterators are like a marker for a particular point in the vector (like a counter).
+
+    //Erasing the first two elements of the vector.
+    //Parameter 1 - Starting point. Parameter 2 - End BEFORE said point.
+    //Vector = { 1, 2, 36, 40, 111 }.
+    intVector.erase(intVector.begin(), intVector.begin() + 2);
+    std::cout << "Vector is " << intVector.size() << std::endl;
+    std::cout << "Vector index 0 is: " << intVector[0] << std::endl;
+
+    std::cout << "\n";
+
+    for (int i = 0; i < intVector.size(); ++i)
+    {
+        std::cout << "Vector index " << i << " is: " << intVector[i] << std::endl;
+    }
+
+    
+
+    //Randomisation.
+    //Generate a random number (anywhere from 0 to RAND_MAX).
+    int totallyRandom = std::rand();
+    std::cout << "Random number is: " << totallyRandom << std::endl;
+
+    //A seed is a starting point for random calculations.
+    //int seed = 100;
+    std::srand(time(NULL));
+
+    //Between two numbers.
+    int lowerNumber = 50;
+    int upperNumber = 150;
+    int range = upperNumber - lowerNumber;
+
+    int seededRandom = std::rand() % range + lowerNumber;
+    std::cout << "Seeded random number is " << seededRandom << std::endl;
+
+
+    */
     /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
     /* ---------------------------------------------------------------------------------- HOMEWORK TASKS ---------------------------------------------------------------------------------- */
@@ -364,7 +427,7 @@ int main()
 
     std::cout << "You were born on: " << dayBorn << "/" << monthBorn << "/" << yearBorn << std::endl;
 
-    */
+    
 
     //Task 6: Selection.
     std::string badWord = "blueberry";
@@ -439,7 +502,7 @@ int main()
     }
 
     
-
+    */
     /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 }
 
