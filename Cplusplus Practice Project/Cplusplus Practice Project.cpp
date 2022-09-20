@@ -500,8 +500,34 @@ int main()
 
         std::cout << score << std::endl;
     }
-
     
+    
+
+    std::vector<std::string> partyNames;
+
+    std::string input = "";
+
+    do
+    {
+        std::cout << "Enter the next party member's name, or Q to stop:" << std::endl;
+        std::cin >> input;
+
+        std::cout << std::endl;
+
+        if (input != "Q")
+        {
+            partyNames.push_back(input);
+        }
+
+    } while (input != "Q");
+
+    std::cout << "Your party is: " << std::endl;
+
+    for (int i = 0; i < partyNames.size(); ++i)
+    {
+        std::cout << "  " << partyNames[i] << std::endl;
+    }
+
     */
     /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 }
